@@ -15,8 +15,8 @@
 
             <q-input
             outlined
-            v-model="form.type"
-            label="Tipo"
+            v-model="form.url"
+            label="URL"
             lazy-rules
             class="col-lg-6 col-xs-12"
             :rules="[ val => val && val.length > 0 || 'Campo obrigatório']"
@@ -49,6 +49,13 @@ import postsService from 'src/services/posts'
 import { useQuasar } from 'quasar'
 import { useRouter, useRoute } from 'vue-router'
 
+// onMounted(() => {
+//   console.log("oieoioie")
+//   fetch("https://pokeapi.co/api/v2/pokemon?limit=10&offset=0")
+//   .then(res => res.json())
+//   .then(res => console.log(res))
+// })
+
 export default defineComponent({
   name: 'FormPokemon',
   setup () {
@@ -58,13 +65,17 @@ export default defineComponent({
     const route = useRoute()
     const form = ref({
       name: '',
-      type: ''
+      url: ''
     })
 
     onMounted(async () => {
       if (route.params.id) {
         getPost(route.params.id)
       }
+
+      // fetch("https://pokeapi.co/api/v2/pokemon?limit=10&offset=0")
+      // .then(res => res.json())
+      // .then(res => console.log(res))
     })
 
     const getPost = async (id) => {
@@ -77,6 +88,7 @@ export default defineComponent({
     }
 
     const onSubmit = async () => {
+      console.log(form)
       try {
         if (form.value.id) {
           await update(form.value)

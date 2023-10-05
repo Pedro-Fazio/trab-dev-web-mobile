@@ -3,22 +3,36 @@
     {
       "id": 1,
       "name": "pikachu",
-      "type": "eletric"
+      "url": "URL"
     },
     {
-      "id": 2,
-      "name": "squirtle",
-      "type": "water"
-    },
-    {
-      "name": "Pichu",
-      "type": "Eletric",
+      "name": "bulbasaur",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/1/",
+      "lastPokemon": 2,
       "id": 3
     },
     {
-      "name": "teste1",
-      "type": "teste2",
+      "name": "adslkfjalkfds",
+      "url": "fdsfdsfds",
       "id": 4
+    },
+    {
+      "name": "ivysaur",
+      "url": "https://pokeapi.co/api/v2/pokemon-speciessdafsdfds",
+      "lastPokemon": 3,
+      "id": 5
+    },
+    {
+      "name": "charmander",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/4/",
+      "lastPokemon": 5,
+      "id": 7
+    },
+    {
+      "name": "charmeleon",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/5/",
+      "lastPokemon": 6,
+      "id": 8
     }
   ]
 }
